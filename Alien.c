@@ -1,7 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
 typedef struct alien_t{
 	char nombre[30];
 	int id;
-	char *especie;
+	char *especie[30];
 	struct planetas_t *planetas;
 	struct idiomas_t *idiomas;
 	struct alient_t *siguiente;
@@ -12,10 +17,10 @@ typedef struct planetas_t{
 	int starwars_code;
 	char agua;
 	char oxigeno;
-	struct planeta_t *siguiente;
+	struct planetas_t *siguiente;
 }planeta;
 
-typedef struct idiomas_t{
+typedef struct idioma_t{
 	char nombre[30];
 	char tipo;
 	int simbolos;
@@ -23,14 +28,14 @@ typedef struct idiomas_t{
 	struct planetas_t *planetas;
 }idiomas;
 
-int int main(int argc, char const *argv[]){
-	alien *alien_aliens;
+int main(int argc, char const *argv[]){
+	alien *lista_aliens;
 	planeta *lista_planetas;
-	idioma *lista_idiomas;
+	idiomas *lista_idiomas;
 	
 	lista_aliens = malloc(sizeof(alien));
 	lista_planetas = malloc(sizeof(planeta));
-	lista_idiomas = malloc(sizeof(idioma));
+	lista_idiomas = malloc(sizeof(idiomas));
 	
 	strcpy(lista_aliens->nombre, "Alf");
 	lista_aliens->id = 1234;
@@ -38,5 +43,5 @@ int int main(int argc, char const *argv[]){
 	printf("El nombre del alien es: %s", lista_aliens->nombre);
 	printf("El ID del alien es: %d\n", lista_aliens->id);
 	
-	return 0
+	return 0;
 }
