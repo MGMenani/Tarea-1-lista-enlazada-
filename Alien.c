@@ -6,7 +6,7 @@
 typedef struct alien_t{
 	char nombre[30];
 	int id;
-	char *especie[30];
+	char especie[30];
 	struct planetas_t *planetas;
 	struct idiomas_t *idiomas;
 	struct alient_t *siguiente;
@@ -39,9 +39,11 @@ int main(int argc, char const *argv[]){
 	
 	strcpy(lista_aliens->nombre, "Alf");
 	lista_aliens->id = 1234;
+	strcpy(lista_aliens->especie, "Marciano");
 	
-	printf("El nombre del alien es: %s", lista_aliens->nombre);
+	printf("El nombre del alien es: %s\n", lista_aliens->nombre);
 	printf("El ID del alien es: %d\n", lista_aliens->id);
+	printf("La especie del alien es: %s\n", lista_aliens->especie);
 	
 	return 0;
 }
