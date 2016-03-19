@@ -18,7 +18,7 @@ int main(int argc, char const *argv[]){
 	
 	printf("El nombre del alien es: %s\n", lista_aliens->nombre);
 	printf("El ID del alien es: %d\n", lista_aliens->id);
-	printf("La especie del alien es: %s\n", lista_aliens->especie);
+	printf("La especie del alien es: %s\n\n", lista_aliens->especie);
 	
 	return 0;
 }
